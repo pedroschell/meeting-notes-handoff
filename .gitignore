@@ -1,0 +1,29 @@
+# Credentials
+.env
+.env.*
+!.env.example
+credentials.json
+token.json
+*.pem
+*.key
+
+# Local configuration
+config/local.json
+.sensivel.local
+.claude/settings.local.json
+
+# Data
+data/
+*.db
+*.db-journal
+*.sqlite
+
+# Logs
+logs/
+*.log
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store

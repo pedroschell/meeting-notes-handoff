@@ -1,0 +1,13 @@
+{
+  "name": "meeting-notes-handoff",
+  "version": "0.1.0",
+  "description": "Lê a transcrição das reuniões no Google Calendar, separa as demandas do cliente e da empresa com um LLM e envia cada uma ao canal certo do Discord.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
