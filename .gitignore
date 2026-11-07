@@ -7,12 +7,7 @@ token.json
 *.pem
 *.key
 
-# Local configuration
-config/local.json
-.sensivel.local
-.claude/settings.local.json
-
-# Data
+# Local data
 data/
 *.db
 *.db-journal

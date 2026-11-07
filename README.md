@@ -24,14 +24,13 @@ SQLite ───────────► atas já enviadas, para nunca repeti
 - **Cada usuário conecta a própria agenda.** O login no Google é OAuth, com
   permissão só de leitura, e cada um usa o próprio cliente OAuth. Nenhuma
   credencial vem com o projeto.
-- **Nada de agência ou cliente no código.** O nome da agência, os rótulos das
-  demandas e o mapa de cliente para canal ficam em `config/local.json`, fora do
-  git.
+- **Nada de agência ou cliente no código.** Toda a configuração fica no `.env`,
+  fora do git. O `.env.example` lista as variáveis.
 - **Roda uma vez e encerra.** Feito para disparo manual ou agendado.
 
 ## Stack
 
-Node 22.5+, sem framework. Testes com `node:test` e estado em SQLite com
+Node 22.9+, sem framework. Testes com `node:test` e estado em SQLite com
 `node:sqlite`, os dois embutidos no Node.
 
 ## Roteiro

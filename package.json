@@ -4,10 +4,12 @@
   "description": "Lê a transcrição das reuniões no Google Calendar, separa as demandas do cliente e da empresa com um LLM e envia cada uma ao canal certo do Discord.",
   "type": "module",
   "engines": {
-    "node": ">=22.5"
+    "node": ">=22.9"
   },
   "scripts": {
+    "start": "node --env-file-if-exists=.env src/index.js",
     "test": "node --test"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "main": "src/index.js"
 }
