@@ -7,6 +7,9 @@ token.json
 *.pem
 *.key
 
+# Local configuration
+canais.json
+
 # Local data
 data/
 *.db

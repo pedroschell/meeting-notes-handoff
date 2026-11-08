@@ -1,0 +1,11 @@
+{
+    "_comment": "Cada cliente tem um channelId e uma lista de keywords. Se alguma keyword aparecer no título da reunião, ignorando maiúsculas e acentos, a ata vai para o canal desse cliente. Se o título combinar com mais de um cliente, a ata vai para todos os canais correspondentes. Se não combinar com nenhum, vai para o canal padrão (DISCORD_CHANNEL_ID no .env).",
+    "Cliente Exemplo": {
+        "channelId": "000000000000000000",
+        "keywords": ["Cliente Exemplo", "Exemplo"]
+    },
+    "Outro Cliente": {
+        "channelId": "111111111111111111",
+        "keywords": ["Outro Cliente"]
+    }
+}
