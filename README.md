@@ -4,6 +4,9 @@ Lê a transcrição das reuniões (**Anotações do Gemini**) no Google Calendar
 analisa as pautas com um LLM, separa as **demandas do cliente** e as **demandas
 da empresa** e envia cada ata ao canal certo do Discord.
 
+**Em produção desde junho de 2026:** 75 atas resumidas e entregues nos canais de
+7 clientes, no lugar do resumo manual depois de cada reunião.
+
 ## Funcionamento
 
 ```
