@@ -1,6 +1,7 @@
 const ENDERECO_DA_GROQ = 'https://api.groq.com/openai/v1/chat/completions';
 
-export async function perguntarAoGroq(pergunta) {
+/** Envia instruções e conteúdo à Groq e devolve a resposta já convertida de JSON para objeto. */
+export async function perguntarAoGroq(instrucoes, conteudo) {
     const cabecalhos = {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + process.env.GROQ_API_KEY,
@@ -8,8 +9,11 @@ export async function perguntarAoGroq(pergunta) {
 
     const pedido = {
         model: process.env.GROQ_MODEL,
+        temperature: 0.2,
+        response_format: { type: 'json_object' },
         messages: [
-            { role: 'user', content: pergunta },
+            { role: 'system', content: instrucoes },
+            { role: 'user', content: conteudo },
         ],
     };
 
@@ -28,6 +32,7 @@ export async function perguntarAoGroq(pergunta) {
 
     const dados = await resposta.json();
     const texto = dados.choices[0].message.content;
+    const resultado = JSON.parse(texto);
 
-    return texto;
+    return resultado;
 }
