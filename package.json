@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node --env-file-if-exists=.env src/index.js",
+    "autorizar": "node src/autorizar.js",
     "test": "node --test"
   },
   "license": "MIT",
