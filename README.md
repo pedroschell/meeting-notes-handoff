@@ -30,7 +30,7 @@ SQLite ───────────► atas já enviadas, para nunca repeti
 
 ## Stack
 
-Node 22.9+, sem framework. Testes com `node:test` e estado em SQLite com
+Node 22.13+, sem framework. Testes com `node:test` e estado em SQLite com
 `node:sqlite`, os dois embutidos no Node.
 
 ## Roteiro
