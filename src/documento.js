@@ -14,12 +14,16 @@ export async function buscarDocumento(tokenDeAcesso, idDoDocumento) {
 
     const semAcesso = resposta.status === 403 || resposta.status === 404;
     if (semAcesso) {
-        throw new Error('A sua conta não tem acesso a este documento (' + resposta.status + ').');
+        const erroDeAcesso = new Error('A sua conta não tem acesso a este documento (' + resposta.status + ').');
+        erroDeAcesso.status = resposta.status;
+        throw erroDeAcesso;
     }
 
     if (!resposta.ok) {
         const detalhe = await resposta.text();
-        throw new Error('Falha ao ler o documento (' + resposta.status + '): ' + detalhe);
+        const erro = new Error('Falha ao ler o documento (' + resposta.status + '): ' + detalhe);
+        erro.status = resposta.status;
+        throw erro;
     }
 
     const documento = await resposta.json();

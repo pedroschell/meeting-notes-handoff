@@ -27,7 +27,9 @@ export async function perguntarAoGroq(instrucoes, conteudo) {
 
     if (!resposta.ok) {
         const detalhe = await resposta.text();
-        throw new Error('Falha ao chamar a Groq (' + resposta.status + '): ' + detalhe);
+        const erro = new Error('Falha ao chamar a Groq (' + resposta.status + '): ' + detalhe);
+        erro.status = resposta.status;
+        throw erro;
     }
 
     const dados = await resposta.json();
